@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="notranslate" th:lang="${#locale.language}" translate="no" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+</head>
+<body>
+<div class="container">
+    <div class="container my-5">
+        <h3 th:text="#{title.proposal.create(${gatheringName})}"></h3>
+        <form action="#" method="post" th:action="@{/names/}" th:object="${proposal}">
+
+<h1>Errors?</h1>
+            <span
+                    class="text-danger" th:errors="*{global}">
+                    </span>
+                    <h1>Form?</h1>
+            <div class="card">
+                <div class="card-body">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <div class="alert alert-info" role="alert" th:text="#{proposal.create.sorting}"></div>
+                            </div>
+                        </div>
+
+                        <!--/* manually add 10 option boxes */-->
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[0]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[0]"
+                                        th:field="*{options[0]}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options[0]}"
+                                        th:if="${#fields.hasErrors('options[0]')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[1]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[1]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[2]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[2]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[3]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[3]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[4]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[4]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[5]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[5]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[6]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[6]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[7]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[7]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[8]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[8]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label class="col-form-label" for="options[9]"
+                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <input
+                                        class="form-control" id="options[9]"
+                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        type="text">
+                                <span
+                                        class="text-danger" th:errors="*{options}"
+                                        th:if="${#fields.hasErrors('options')}"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 pt-1">
+                                <input class="btn btn-primary ml-2" th:value="#{proposal.create.save}"
+                                       type="submit">
+                                <input class="btn btn-danger ml-2" th:value="#{menu.resetForm}" type="reset"/>
+                            </div>
+
+                            <div class="form-group col-md-8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
