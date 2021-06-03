@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import lombok.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -18,6 +19,11 @@ public class ValidationCompileErrorApplication {
 
 }
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@ToString
 class ValidationInputForm {
     @Size(min = 1, max = 10)
     @NotEmpty(message = "{NotEmpty.option.options}")
