@@ -41,6 +41,8 @@ public class ValidationCompileErrorApplication {
 class ValidationInputForm {
     @Size(min = 1, max = 10)
     @NotEmpty(message = "{NotEmpty.option.options}")
+//    private List<@NotEmpty(message = "{NotEmpty.option.optionelement}") String> options = new ArrayList<>();
+//    private List<String> options = new ArrayList<>();
     private List<@NotEmpty(message = "{NotEmpty.option.optionelement}") String> options = new ArrayList<>();
 }
 
