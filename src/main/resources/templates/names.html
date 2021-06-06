@@ -25,6 +25,9 @@
                         </div>
 
                         <!--/* manually add 10 option boxes */-->
+                        <div class="row" th:each="number : ${#numbers.sequence( 0, 9, 1)}">
+                            <span th:text="${number}"></span>
+                        </div>
                         <div class="row">
                             <div class="form-group col-md-8">
                                 <label class="col-form-label" for="options[0]"
