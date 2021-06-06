@@ -25,10 +25,8 @@
                         </div>
 
                         <!--/* manually add 10 option boxes */-->
-                        <div class="row" th:each="number : ${#numbers.sequence( 0, 19, 1)}">
+                        <div class="row" th:each="number : ${#numbers.sequence( 0, 9, 1)}">
                             <span th:text="${number}"></span>
-                        </div>
-                        <div class="row">
                             <div class="form-group col-md-8">
                                 <label class="col-form-label" for="options[0]"
                                        th:text="#{proposal.create.optionHeader}"></label>
@@ -39,123 +37,6 @@
                                 <span
                                         class="text-danger" th:errors="*{options[0]}"
                                         th:if="${#fields.hasErrors('options[0]')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[1]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[1]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[2]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[2]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[3]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[3]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[4]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[4]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[5]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[5]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[6]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[6]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[7]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[7]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[8]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[8]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[9]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
-                                <input
-                                        class="form-control" id="options[9]"
-                                        th:field="*{options}" th:placeholder="#{proposal.create.optionPlaceholder}"
-                                        type="text">
-                                <span
-                                        class="text-danger" th:errors="*{options}"
-                                        th:if="${#fields.hasErrors('options')}"></span>
                             </div>
                         </div>
                         <div class="row">
