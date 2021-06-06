@@ -10,11 +10,11 @@
         <h3 th:text="#{title.proposal.create(${gatheringName})}"></h3>
         <form action="#" method="post" th:action="@{/names/}" th:object="${proposal}">
 
-<h1>Errors?</h1>
+            <h1>Errors?</h1>
             <span
                     class="text-danger" th:errors="*{global}">
                     </span>
-                    <h1>Form?</h1>
+            <h1>Form?</h1>
             <div class="card">
                 <div class="card-body">
                     <div class="col-md-10">
@@ -24,19 +24,26 @@
                             </div>
                         </div>
 
-                        <!--/* manually add 10 option boxes */-->
+                        <!--/* manually add 10 option boxes
+                        TODO: https://stackoverflow.com/questions/25027801/how-to-set-thymeleaf-thfield-value-from-other-variable
+
+                        https://stackoverflow.com/questions/25808433/hidden-field-value-blank-thymeleaf
+
+                        <input type="text" th:field="*{parameters[${stat.index}].field}" style="display:none;">
+
+                        */-->
                         <div class="row" th:each="number : ${#numbers.sequence( 0, 9, 1)}">
                             <span th:text="${number}"></span>
                             <div class="form-group col-md-8">
-                                <label class="col-form-label" for="options[0]"
-                                       th:text="#{proposal.create.optionHeader}"></label>
+                                <label class="col-form-label" th:for="${'options['+number+']'}"
+                                       th:text="#{create.optionHeader}"></label>
                                 <input
-                                        class="form-control" id="options[0]"
-                                        th:field="*{options[0]}" th:placeholder="#{proposal.create.optionPlaceholder}"
+                                        class="form-control" th:field="*{'options['+${number}+']'}"
+                                        th:id="${'options['+number+']'}" th:placeholder="#{create.optionPlaceholder}"
                                         type="text">
                                 <span
-                                        class="text-danger" th:errors="*{options[0]}"
-                                        th:if="${#fields.hasErrors('options[0]')}"></span>
+                                        class="text-danger" th:errors="*{'options['+${number}+']'}"
+                                        th:if="${#fields.hasErrors('options['+number+']')}"></span>
                             </div>
                         </div>
                         <div class="row">
