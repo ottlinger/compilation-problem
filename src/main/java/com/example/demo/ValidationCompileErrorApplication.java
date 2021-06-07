@@ -63,7 +63,8 @@ class NameController {
     @PostMapping(value = "/")
     public ModelAndView saveNames(final @Valid @ModelAttribute("proposal") ValidationInputForm form, final BindingResult result, Model model, RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
-            log.warn("{} validation errors: {}", result.getErrorCount(), result.getAllErrors());
+            log.error("{} validation errors: {}", result.getErrorCount(), result.getAllErrors());
+            log.error("{} global validation errors: {}", result.getGlobalErrorCount(), result.getGlobalErrors());
             return new ModelAndView("names.html");
         }
 
