@@ -48,6 +48,9 @@
                                         th:id="${'options['+number+']'}" th:placeholder="#{create.optionPlaceholder}"
                                         type="text">
                                 <span
+                                        class="text-danger"
+                                        th:text="${#fields.hasErrors('options['+__${number}__+']')}"></span>
+                                <span
                                         class="text-danger" th:attr="errors='options[' + ${number} + ']'"
                                         th:if="${#fields.hasErrors('options['+__${number}__+']')}"></span>
                             </div>
