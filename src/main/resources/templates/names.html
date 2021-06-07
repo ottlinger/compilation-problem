@@ -28,9 +28,6 @@
                         TODO: https://stackoverflow.com/questions/25027801/how-to-set-thymeleaf-thfield-value-from-other-variable
 
                         https://stackoverflow.com/questions/25808433/hidden-field-value-blank-thymeleaf
-
-                        <input type="text" th:field="*{parameters[${stat.index}].field}" style="display:none;">
-
                         */-->
                         <div class="row" th:each="number : ${#numbers.sequence( 0, 9, 1)}">
                             <span th:text="${number}"></span>
@@ -38,11 +35,11 @@
                                 <label class="col-form-label" th:for="${'options['+number+']'}"
                                        th:text="#{create.optionHeader}"></label>
                                 <input
-                                        class="form-control" th:field="*{'options['+${number}+']'}"
+                                        class="form-control" th:field="*{options[0]}"
                                         th:id="${'options['+number+']'}" th:placeholder="#{create.optionPlaceholder}"
                                         type="text">
                                 <span
-                                        class="text-danger" th:errors="*{'options['+${number}+']'}"
+                                        class="text-danger" th:errors="*{options[0]}"
                                         th:if="${#fields.hasErrors('options['+number+']')}"></span>
                             </div>
                         </div>
