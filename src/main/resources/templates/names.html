@@ -56,13 +56,6 @@
                                 <span
                                         class="text-danger" th:attr="errors='options[' + ${number} + ']'"
                                         th:if="${#fields.hasErrors('options['+__${number}__+']')}"></span>
-
-<p>Err?</p>
-                                        <div th:if="${#fields.hasErrors('options[' + number + ']')}"
-                                             th:each="e : ${#fields.errors('options[' + number + ']')}" th:text="#{${e}}" >
-                                        </div>
-
-
                             </div>
                         </div>
                         <div class="row">
