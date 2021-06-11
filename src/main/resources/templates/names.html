@@ -20,6 +20,12 @@
             <span
                     class="text-danger" th:errors="*{all}">
                     </span>
+
+                    <div th:if="${#fields.hasErrors('options')}"
+                         th:each="e : ${#fields.errors('options')}" th:text="#{${e}}" >
+                    </div>
+
+
             <h1>Form?</h1>
             <div class="card">
                 <div class="card-body">
@@ -47,6 +53,12 @@
                                 <span
                                         class="text-danger" th:attr="errors='options[' + ${number} + ']'"
                                         th:if="${#fields.hasErrors('options['+__${number}__+']')}"></span>
+
+                                        <div th:if="${#fields.hasErrors('options[' + number + ']')}"
+                                             th:each="e : ${#fields.errors('options[' + number + ']')}" th:text="#{${e}}" >
+                                        </div>
+
+
                             </div>
                         </div>
                         <div class="row">
