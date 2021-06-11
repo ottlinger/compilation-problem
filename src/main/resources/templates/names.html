@@ -15,18 +15,18 @@
             <span
                     class="text-danger" th:errors="*{global}">
                     </span>
-                    <h2>options</h2>
+            <h2>options</h2>
             <span
                     class="text-danger" th:errors="*{options}">
                     </span>
-                    <h2>all</h2>
+            <h2>all</h2>
             <span
                     class="text-danger" th:errors="*{all}">
                     </span>
-                    <h2>div-option</h2>
-                    <div th:if="${#fields.hasErrors('options')}"
-                         th:each="e : ${#fields.errors('options')}" th:text="#{${e}}" >
-                    </div>
+            <h2>div-option</h2>
+            <div th:each="e : ${#fields.errors('options')}"
+                 th:if="${#fields.hasErrors('options')}" th:text="#{${e}}">
+            </div>
 
 
             <h1>Form?</h1>
