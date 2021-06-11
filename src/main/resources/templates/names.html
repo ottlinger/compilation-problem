@@ -11,16 +11,19 @@
         <form action="#" method="post" th:action="@{/names/}" th:object="${proposal}">
 
             <h1>Errors?</h1>
+            <h2>global</h2>
             <span
                     class="text-danger" th:errors="*{global}">
                     </span>
+                    <h2>options</h2>
             <span
-                    class="text-danger" th:errors="*{options}">
+                    class="text-danger" th:errors="#{*{options}}">
                     </span>
+                    <h2>all</h2>
             <span
                     class="text-danger" th:errors="*{all}">
                     </span>
-
+                    <h2>div-option</h2>
                     <div th:if="${#fields.hasErrors('options')}"
                          th:each="e : ${#fields.errors('options')}" th:text="#{${e}}" >
                     </div>
